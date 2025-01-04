@@ -1,8 +1,9 @@
 <script setup lang="ts">
-const layout = inject('layout')
+const layout = useState('layout')
+const route = useRoute()
 
 onMounted(() => {
-  console.log(`custom onMounted called with layout ${layout}`)
+  console.log(`custom onMounted called with layout ${layout.value}`)
 })
 
 onUpdated(() => {
